@@ -1,0 +1,40 @@
+.wrap-header{
+    /* .wrap-header - 헤더의 내용이 담기는 부분만 아니라 헤더부분 모두 색 입힘 */
+    background-color: rgb(250, 255, 240);
+}
+.wrap-header header{
+    /* 헤더의 내용이 담기는 분 사이즈 및 가운데 정렬 */
+    width: 960px;
+    margin: 0 auto;
+}
+.wrap-footer{
+    /* 풋터의 내용이 담기는 배경부분 색입히기 */
+    /* .wrap-main > section, aside 에서 float : left 를 지정해 줬으므로 */
+    /* 부모의 다음 노드인 .wrap-footer 에서 해제 */
+    background-color: rgb(250, 255, 240);
+    clear: both;
+}
+.wrap-footer footer{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.wrap-main{
+    width: 960px;
+    margin:0 auto;
+
+    overflow: hidden;
+    /* 텍스트가 border 를 넘어 넘치게 될때, hidden 숨김 / visible border 밖에까지 나타냄 */
+    
+    padding: 10px 0;
+}
+.wrap-main section{
+    float:left;
+    width:750px;
+    margin-right: 10px;
+    background-color: aqua;
+}
+.wrap-main aside{
+    float:left;
+    width:200px;
+}

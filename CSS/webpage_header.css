@@ -1,0 +1,32 @@
+header nav>ul{
+    overflow: hidden;
+}
+header nav>ul>li{
+    float:left;
+}
+header nav, header div.logo{
+    clear: both;
+}
+header{
+    position: relative;
+    height: 150px;
+}
+header nav.tnb{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+header nav.bnb{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+header div.logo{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+header nav>ul>li>a{
+    border: 1px solid black;
+    padding: 10px;
+}
