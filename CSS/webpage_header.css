@@ -11,6 +11,11 @@ header{
     position: relative;
     height: 150px;
 }
+header a{
+    /* inline > inline block : width, height, padding, margin 입력하기 위해 */
+    display: inline-block;
+    border: 1px solid black;
+}
 header nav.tnb{
     position: absolute;
     top: 0;
@@ -26,7 +31,24 @@ header div.logo{
     top: 50px;
     left: 20px;
 }
-header nav>ul>li>a{
+header a{
+    display: inline-block;
     border: 1px solid black;
-    padding: 10px;
+}
+header .tnb a{
+    padding: 5px 10px;
+}
+header .bnb a{
+    padding: 10px 15px;
+}
+
+header li:first-child > a{
+    border-radius: 15px 0 0 15px;
+}
+header li:last-child > a{
+    border-radius: 0 15px 15px 0 ;
+}
+header a:hover{
+    background-color: black;
+    color: white;
 }

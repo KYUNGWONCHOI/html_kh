@@ -1,0 +1,39 @@
+/* font */
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+h1 {
+    font-weight: 900;
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+h3 {
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1.1em;
+}
+.hi-melody {
+    font-family: "Hi Melody", sans-serif;
+    font-style: normal;
+}
+.noto-sans {
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+}
+
+/* <a > 관련 */
+a {
+    text-decoration: none;
+    color: black;
+}
+/* a:link {
+    color: aqua;
+}
+a:visited{
+    color: tomato;
+}
+a:active{
+    color:green;
+} */

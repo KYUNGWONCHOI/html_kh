@@ -7,7 +7,7 @@
     <title>Web page</title>
     <link href="../CSS/reset.css" rel="stylesheet">
     <link href="../CSS/webpage_main.css" rel="stylesheet">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
@@ -16,6 +16,98 @@
     <link href="/CSS/webpage_layout.css" rel="stylesheet">
     <link href="/CSS/webpage_header.css" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/webpage_aside.css">
+    <link rel="stylesheet" href="/CSS/webpage_section.css">
+    <style>
+        @media screen and (min-width:960px) {
+            body {
+                font-size: 1.1em;
+            }
+
+            h1 {
+                font-weight: 900;
+                font-size: 1.5em;
+                line-height: 1em;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: 1.0em;
+                line-height: 1em;
+            }
+
+            header .tnb a {
+                padding: 3px 8px;
+            }
+
+            header .bnb a {
+                padding: 8px 13px;
+            }
+
+        }
+
+        @media screen and (min-width:800px) and (max-width:960px){
+            body {
+                font-size: .8em;
+            }
+            .wrap-header header {
+                /* 헤더의 내용이 담기는 분 사이즈 및 가운데 정렬 */
+                width: 600px;
+                margin: 0 auto;
+            }
+            h1 {
+                font-weight: 900;
+                font-size: 1em;
+                line-height: 1em;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: .8em;
+                line-height: 1em;
+            }
+
+            header .tnb a {
+                padding: 3px 8px;
+            }
+
+            header .bnb a {
+                padding: 8px 13px;
+            }
+
+            .wrap-footer {
+                /* 풋터의 내용이 담기는 배경부분 색입히기 */
+                /* .wrap-main > section, aside 에서 float : left 를 지정해 줬으므로 */
+                /* 부모의 다음 노드인 .wrap-footer 에서 해제 */
+                background-color: rgb(250, 255, 240);
+                /* clear: both; */
+            }
+
+            .wrap-footer footer {
+                width: 600px;
+                margin: 0 auto;
+            }
+
+            .wrap-main {
+                /* width: 960px; */
+                margin: 0 auto;
+
+                overflow: hidden;
+                /* 텍스트가 border 를 넘어 넘치게 될때, hidden 숨김 / visible border 밖에까지 나타냄 */
+
+                /* padding: 10px 0; */
+            }
+
+            .wrap-main section {
+                width: 600px;
+                background-color: rgb(243, 255, 255);
+            }
+
+            .wrap-main aside {
+                width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -48,16 +140,16 @@
         </div>
         <div class="wrap-main">
             <section>
-                <article>
+                <article class="article-1">
                     <h3>FlexBox</h3>
-                    <div>
+                    <div class="flex-3 menubar">
                         <div>Lorem Flex</div>
                         <div>Lorem Flex</div>
                         <div>Lorem Flex</div>
                         <div>Lorem Flex</div>
                         <div>Lorem Flex</div>
                     </div>
-                    <div>
+                    <div class="flex-3 inputform">
                         <div>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare, orci quis
                             consequat convallis, nulla augue faucibus velit, a cursus diam nisi nec nunc. Sed a lacus
@@ -91,16 +183,16 @@
 
                     </div>
                 </article>
-                <article>
+                <article class="article-2">
                     <h3>Grid</h3>
-                    <div>
+                    <div class="grid-4">
                         <div>Lorem Flex</div>
                         <div>Lorem Flex</div>
                         <div>Lorem Flex</div>
                         <div>Lorem Flex</div>
                         <div>Lorem Flex</div>
                     </div>
-                    <div>
+                    <div class="grid-4">
                         <div>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare, orci quis
                             consequat convallis, nulla augue faucibus velit, a cursus diam nisi nec nunc. Sed a lacus
@@ -136,7 +228,7 @@
             </section>
             <aside>
                 <input type="radio" name="n1" id="first" checked="checked">
-                <input type="radio" name="n1" id="second" >
+                <input type="radio" name="n1" id="second">
                 <label for="first">First</label>
                 <label for="second">Second</label>
                 <div>
@@ -223,11 +315,12 @@
         </div>
         <div class="wrap-footer">
             <footer>
-                <h3>HTML5 + CSS3 Basic</h3>
                 <div>
-
+                    slide images
                 </div>
-            </footer>  
+                <h3>HTML5 + CSS3 Basic</h3>
+                <address>Website Layout Basic</address>
+            </footer>
         </div>
     </div>
 </body>
