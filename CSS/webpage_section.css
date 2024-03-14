@@ -12,6 +12,27 @@ section article.article-1 div.flex-3 > div{
     width: 30%;
     border: 1px solid black;
 }
+section article.article-1 div.flex-3.inputform {
+    display: flex;
+
+    /* 양쪽정렬 */
+    justify-content: space-between;
+    row-gap: 10px;
+
+    /* 여러줄 */
+    flex-wrap: wrap;
+}
+section article.article-1 div.flex-3.inputform > div {
+    border: 1px solid black;
+
+    /* flex 자식의 최대 크기 */
+    width: 49%;
+}
+section article.article-2 div.grid-4.basis {
+    /* grid-template-columns:1fr 2fr 1fr; */
+    grid-template-columns:auto auto auto;
+    /* grid-template-columns:auto auto auto; */
+}
 section article.article-2 div.grid-4{
     display: grid;
     row-gap: 10px;
@@ -20,4 +41,15 @@ section article.article-2 div.grid-4{
 }
 section article.article-2 div.grid-4 > div{
     border: 1px solid black;
+}
+section .flex-card-item{
+    display: flex;
+    flex-direction: column;
+}
+section .flex-card-item > .flex-icons {
+    display: flex;
+    justify-content: space-between;
+}
+section .fullsizeimg{
+    width: 100%;
 }
