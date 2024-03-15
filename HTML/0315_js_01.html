@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script 01</title>
+    <script>
+        // 디버깅 용도로 많이 쓰임
+        document.write("_head_Hello");
+        document.write("bye");
+        // 화면 공백하며 나타남, 화면이 보여지는 상태에서 뿌리려면 ajax(비동기방식)
+        // window.alert("warning");
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1 id="id2">JavaScript</h1>
+        <h1 class="c2">Script</h1>
+        <h1 class="c2">Java</h1>
+    </div>
+    <script>
+        // window. 은 생략 가능함 / this. 같은 거
+        prompt("wo window.");
+        // document.get~ window. 이 생략된 상태임
+        window.document.getElementById("id2");
+        //window 영역은 인터넷브라우저 사이트 / document 영역은 페이지에서 사용자가 확인하는 페이지 영역
+        
+        var a3 = document.getElementById("id2");
+        console.log(a3);
+        var a4 = document.getElementsByClassName("c2");
+        console.log(a4);
+        var a5 = document.getElementsByTagName("h1");
+        console.log(a5);
+
+        // 선택자?
+        var a6 = document.querySelectorAll(".c2");
+        console.log(a6);
+
+        var a8;
+        a8 = false;
+        console.log(typeof (a8));
+        // 123 = number, "asd" = string, true = boolean, null = object,  = undefined
+
+        a8 = 123;
+        console.log(typeof (a8));
+        // 이미 선언된 변수에 다른 자료형의 값 넣으면 바뀜 mutable
+
+        var a9 = {
+            k1: 123
+            , name: "choi"
+            , gender: "M"
+            , a14 : function () {
+                console.log("function 형태 변수 선언");
+                console.log("변수명이 function명이 됨");
+                console.log(1024 * 640);
+                return 65633;
+            }
+        };
+        console.log(a9);
+        console.log(a9.gender);
+
+        // function 함수정의
+        var a10 = function () {
+            console.log("function 형태 변수 선언");
+            console.log("변수명이 function명이 됨");
+            console.log(1024 * 640);
+            return 65633;
+        };
+        console.log(typeof (a10));
+        console.log(a10);
+        //함수실행
+        a10();
+        console.log(a10());
+
+        function a12() {
+            console.log("function 정의");
+            console.log("자바와 동일한 위치에 함수명이 있음")
+            console.log(1020 * 123);
+            return 111 * 222;
+        }
+        console.log("a9.a14   ================================");
+        console.log(a9.a14);
+        console.log("a9.a14() ================================");
+        console.log(a9.a14());
+
+        var a15 = {k1:1, k2:"s"};
+        console.log(a15);
+        a15.k3 = "새로운 key";
+        console.log(a15);
+
+        // var 없이 생성 가능 / 프로젝트 실행 시, 변수를 지나기 전에는 콘솔에 안 나옴
+        a16 = "a16 은 앞에 window. 생략 / window 에 기존 key 16이 없다면 생성 있다면 변경";
+        console.log(a16);
+
+
+    </script>
+    <script>
+        document.write("_body_Hello");
+        document.write("bye");
+        // window.alert("warning");
+
+        // 0번째 h1 태그의 내용을 바꿔 줌
+        document.getElementsByTagName("h1")[1].innerHTML = "<em>바꿈문자</em>";
+        document.getElementsByTagName("h1")[2].innerHTML = '<a href="#">바꿈문자</a>';
+        // document.getElementsByTagName("h1")[0].innerText = "innerText문자만";
+    </script>
+    <script>
+        // 내용 입력
+        // var a1 = window.prompt("프롬프트");
+
+        // document.getElementsByTagName("h1")[0].innerText = a1;
+        // console.log(a1);
+
+        // true / false 의 결과를 가짐
+        // var a2 = window.confirm("계속 진행?");
+        // console.log(a2);
+    </script>
+</body>
+
+</html>
