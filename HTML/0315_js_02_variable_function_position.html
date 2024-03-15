@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script 02</title>
+
+    <!-- 헤더 안 script 에는 function 선언 -->
+    <script>
+        function f1() {
+            //함수 안에서 var 없이 선언하면 전역변수 : 함수 호출 후 전역변수 / 함수 호출 전 변수 생성 안됨
+            a4 = 4;
+            //함수 안에서 var 로 선언하면 지역변수
+            var a3 = 3;
+            console.log("변수 선언 ---3 a1: " + a1);
+            console.log("변수 선언 ---3 a2: " + a2);
+            console.log("변수 선언 ---3 a3: " + a3);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="id2">JavaScript id1</h1>
+    <h1 class="c2">JavaScript c2</h1>
+    <h1 class="c2">JavaScript c3</h1>
+    <script>
+        // 전역변수로 사용할 변수들은 여기에 선언
+        // let 으로 선언 시 중복 선언 불가
+        let l1 = 1;
+
+        // function 으로 선언하는게 아닌 변수 = function 은 여기에 선언
+        var f2 = function() {
+            a4 = 4;
+            var a3 = 3;
+            console.log("변수 선언 ---3 a1: " + a1);
+            console.log("변수 선언 ---3 a2: " + a2);
+            console.log("변수 선언 ---3 a3: " + a3);
+        }
+
+        //함수 밖 변수는 전역변수 : var 유무 상관 없음
+        var a1 = 1;
+        console.log("변수 선언 ---1 a1: " + a1);
+        console.log("변수 선언 ---1 a2: " + a2);
+        // console.log("변수 선언 ---1 a3: " + a3);
+        {
+            //전역변수
+            var a2 = 2;
+            console.log("변수 선언 ---2 a1: " + a1);
+            console.log("변수 선언 ---2 a2: " + a2);
+            // console.log("변수 선언 ---2 a3: " + a3);
+        }
+        // 함수 안에있는 var 변수 만 지역변수의 의미를 가짐
+        function f1() {
+            //함수 안에서 var 없이 선언하면 전역변수 : 함수 호출 후 전역변수 / 함수 호출 전 변수 생성 안됨
+            a4 = 4;
+            //함수 안에서 var 로 선언하면 지역변수
+            var a3 = 3;
+            console.log("변수 선언 ---3 a1: " + a1);
+            console.log("변수 선언 ---3 a2: " + a2);
+            console.log("변수 선언 ---3 a3: " + a3);
+        }
+    </script>
+    <h1> 변수 var 영역</h1>
+    <script>
+        f1();
+        console.log("변수 선언 ---4 a1: " + a1);
+        console.log("변수 선언 ---4 a2: " + a2);
+        // console.log("변수 선언 ---4 a3: " + a3);
+    </script>
+</body>
+
+</html>

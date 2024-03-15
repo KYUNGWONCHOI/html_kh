@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script 03</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <h1 id="id2">연산자</h1>
+    <h1 class="c2">제어문</h1>
+    <script>
+        var a1 = 10;
+        var a2 = "10";
+        // == 값 비교
+        console.log((a1 == a2) ? "같다" : "다르다");
+        // ===자료형까지 비교
+        console.log((a1 === a2) ? "같다" : "다르다");
+        // true == 1 / false == 0 / boolean true != String true 
+
+        var arr = ["apple", "mango"];
+        console.log(arr);
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+        console.log("==================");
+        var arr = ["apple", "mango", function () { console.log("function in array") }];
+        for (var i in arr){
+            console.log("============="+typeof(arr[i]));
+            if(typeof (arr[i]) == "function"){
+                arr[i]();
+            }
+            // if(typeof (arr[i]) == "string"){
+            //     console.log("000000");
+            //     arr[i]();
+            // }
+        }
+
+        // for(var i in T) T 가 배열이라면 index가 i 로, obj 라면 key 값이 i 로
+        for (var i in arr) {
+            console.log(arr[i]);
+        }
+        var obj = {
+            k1: "seoul"
+            , k2: "daejeon"
+        };
+        console.log(obj.k1);
+        console.log(obj["k1"]);
+        for (var key in obj) {
+            console.log(key);
+            console.log(obj[key]);
+        }
+    </script>
+</body>
+
+</html>
